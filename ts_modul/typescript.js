@@ -1,26 +1,26 @@
 // 1. Feladat
-function RnG(alsoHatar, felsoHatar) {
+function Rng(alsoHatar, felsoHatar) {
     var eredmeny = Math.round(Math.random() * (felsoHatar - alsoHatar) + alsoHatar);
     return eredmeny;
 }
-console.log(RnG(1, 20));
+console.log(Rng(1, 20));
 // 2. Feladat
 function TombGenerator(meret, alsoHatar, felsoHatar) {
     var eredmeny = [];
     if (alsoHatar > felsoHatar) {
         alsoHatar -= felsoHatar;
         for (var i = 1; i <= meret; i++) {
-            eredmeny.push(RnG(alsoHatar, felsoHatar));
+            eredmeny.push(Rng(alsoHatar, felsoHatar));
         }
     }
     else {
         for (var i = 1; i <= meret; i++) {
-            eredmeny.push(RnG(alsoHatar, felsoHatar));
+            eredmeny.push(Rng(alsoHatar, felsoHatar));
         }
     }
     return eredmeny;
 }
-var generaltTomb = TombGenerator(RnG(2, 10), RnG(1, 20), RnG(1, 20));
+var generaltTomb = TombGenerator(Rng(2, 10), Rng(1, 20), Rng(1, 20));
 console.log(generaltTomb);
 //3. Feladat
 function Duplazo(VizsgaltTomb) {

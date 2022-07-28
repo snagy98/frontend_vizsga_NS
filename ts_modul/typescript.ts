@@ -1,10 +1,10 @@
 // 1. Feladat
-function RnG(alsoHatar:number,felsoHatar:number):number{
+function Rng(alsoHatar:number,felsoHatar:number):number{
     let eredmeny:number = Math.round(Math.random() * (felsoHatar - alsoHatar) + alsoHatar);
 
     return eredmeny;
 }
-console.log(RnG(1,20));
+console.log(Rng(1,20));
 
 
 
@@ -18,18 +18,18 @@ function TombGenerator(meret:number, alsoHatar:number, felsoHatar:number):number
         alsoHatar -= felsoHatar;
         
         for(let i:number = 1; i <=meret; i++){
-            eredmeny.push(RnG(alsoHatar,felsoHatar));
+            eredmeny.push(Rng(alsoHatar,felsoHatar));
         }
 
     }else{
         for(let i:number = 1; i <=meret; i++){
-            eredmeny.push(RnG(alsoHatar,felsoHatar));
+            eredmeny.push(Rng(alsoHatar,felsoHatar));
         }
     }
     
     return eredmeny;
 }
-const generaltTomb:number[] = TombGenerator(RnG(2,10),RnG(1,20),RnG(1,20));
+const generaltTomb:number[] = TombGenerator(Rng(2,10),Rng(1,20),Rng(1,20));
 console.log(generaltTomb);
 
 //3. Feladat
