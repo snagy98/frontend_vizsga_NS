@@ -1,0 +1,14 @@
+<p class="h1">Angular modul megoldása</p>
+
+<div class="form-group m-2">
+    <label class="form-label" id="aOldal">A oldal értéke: </label>
+    <input type="number" class="form-control" [(ngModel)]="aOldal" value={{aOldal}}>
+
+    <label class="form-label" id="bOldal">B oldal értéke:</label>
+    <input type="number" class="form-control" [(ngModel)]="bOldal" value={{bOldal}}>
+
+</div>
+<p>A téglalap kerülete: {{(aOldal + bOldal) *2}}</p>
+<p>A téglalap területe: {{bOldal * aOldal}} cm</p>
+
+<button class="btn btn-warning w-100" (click)="EredmenyMentes()">Eredmény mentése</button>
