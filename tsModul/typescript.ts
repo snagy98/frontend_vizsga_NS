@@ -47,3 +47,26 @@ function Duplazo(VizsgaltTomb:number[]):number[]{
 }
 
 console.log(Duplazo(generaltTomb));
+
+//4. Feladat
+
+function PrimekSzama( VizsgaltTomb:number[]):number{
+    let eredmeny:number = 0;
+
+
+    for (let i:number = 0; i < VizsgaltTomb.length; i++){
+        let szamlalo:number = 0;
+        for(let j:number = 1; j <= VizsgaltTomb[i]; j++){
+            if(VizsgaltTomb[i] % j == 0){
+                szamlalo++;
+            }
+        }
+        if(szamlalo == 2){
+            eredmeny++;
+        }
+    }
+
+    return eredmeny;
+}
+
+console.log(PrimekSzama(generaltTomb));

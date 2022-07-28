@@ -31,3 +31,20 @@ function Duplazo(VizsgaltTomb) {
     return eredmeny;
 }
 console.log(Duplazo(generaltTomb));
+//4. Feladat
+function PrimekSzama(VizsgaltTomb) {
+    var eredmeny = 0;
+    for (var i = 0; i < VizsgaltTomb.length; i++) {
+        var szamlalo = 0;
+        for (var j = 1; j <= VizsgaltTomb[i]; j++) {
+            if (VizsgaltTomb[i] % j == 0) {
+                szamlalo++;
+            }
+        }
+        if (szamlalo == 2) {
+            eredmeny++;
+        }
+    }
+    return eredmeny;
+}
+console.log(PrimekSzama(generaltTomb));
