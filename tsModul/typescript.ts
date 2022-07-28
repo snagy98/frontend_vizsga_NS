@@ -70,3 +70,4 @@ function PrimekSzama( VizsgaltTomb:number[]):number{
 }
 
 console.log(PrimekSzama(generaltTomb));
+
